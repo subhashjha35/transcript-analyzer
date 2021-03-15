@@ -7,16 +7,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import AppComponent from './app.component';
 import { ROUTES } from './app.routing';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
-
+    ChartsModule,
     FlexLayoutModule
   ],
   providers: [],

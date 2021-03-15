@@ -10,6 +10,6 @@ import User from '../../models/user';
 export default class UserServiceMock {
 
     getCurrentLoggedInUser(): Observable<User | null> {
-        return of(MOCK_DATA);
+        return of(MOCK_DATA as User);
     }
 }

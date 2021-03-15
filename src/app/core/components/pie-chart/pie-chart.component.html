@@ -1,0 +1,12 @@
+<div class="chart-container">
+  <strong>{{ pieChartData[0] | percent }}</strong>
+  <canvas baseChart
+    height="20px"
+    width="20px"
+    [colors]="[{backgroundColor: ['#5A5A71', '#C6C6C6'], borderColor: 'transparent'}]"
+    [data]="pieChartData"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>

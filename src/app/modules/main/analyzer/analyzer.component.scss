@@ -12,13 +12,34 @@ mat-card {
     mat-card-header {
         box-sizing: border-box;
         padding: 16px 24px;
+        vertical-align: center;
         background: $mat-card-header-bg;
         border-bottom: 1px solid $mat-card-header-border-color;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
+        
+        mat-card-title {
+            font-size: 16px;
+            margin-bottom: 0px;
+            app-pie-component {
+                height: 16px;
+            }
+        }
     }
 }
 
+.empty-state {
+    position: relative;
+    height: 100%;
+    &-content{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
 #intensity-selection {
     mat-slider {
         margin: 0 16px;
@@ -37,9 +58,8 @@ mat-card {
 
     &-sentence:not(.mat-header-cell) {
         .matcher {
-            background: rgba(#5A5A71, .2);
             transition: background .2s;
-
+            
             &:hover {
                 background: rgba(#5A5A71, .4);
             }
@@ -47,6 +67,12 @@ mat-card {
     }
 }
 
+.highlighted {
+    background: rgba(#5A5A71, .4);
+}
+.matched-sensitivity {
+    background: rgba(#5A5A71, .2);
+}
 tr.mat-row {
     height: auto;
 }
